@@ -1,6 +1,7 @@
 #!/bin/bash
 
 SESSION="safe_vault"
+export TERM=xterm
 
 tmux has-session -t $SESSION 2>/dev/null
 
