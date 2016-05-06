@@ -1,6 +1,7 @@
 #!/bin/bash
 
 SESSION="safe_vault"
+
 export TERM=xterm
 
 tmux has-session -t $SESSION 2>/dev/null
@@ -18,8 +19,8 @@ if [ "$?" -eq 1 ] ; then
   tmux send-keys "./safe_vault" C-m
   tmux select-pane -t 1
   tmux split-window -h
-  tmux send-keys "watch ps -onlwp `pgrep safe_vault |cut -d" " -f1`"  C-m
+  tmux send-keys "watch ls -hs /tmp/safe-vault.*" C-m
   tmux select-pane -t 1
-  tmux send-keys "watch `ls -hs /tmp/safe-vault.*`" C-m
+  tmux send-keys "htop -d 10"  C-m
 fi
 ./gotty tmux -2 attach-session -t $SESSION

@@ -2,7 +2,7 @@ FROM debian:jessie
 MAINTAINER Benjamin Kampmann (http://github.com/ligthyear)
 
 RUN apt-get update -y
-RUN apt-get install -y tmux curl unzip
+RUN apt-get install -y tmux curl unzip htop
 
 RUN mkdir -p /app
 WORKDIR /app
