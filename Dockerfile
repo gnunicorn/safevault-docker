@@ -12,7 +12,7 @@ RUN tar xvvf gotty_linux_386.tar.gz
 
 RUN curl -sLO https://github.com/maidsafe/safe_vault/releases/download/0.8.0/safe_vault-v0.8.0-linux-x64.zip
 RUN unzip safe_vault-v0.8.0-linux-x64.zip
-RUN mv safe_vault-v0.8.0-linux-x64/* .
+RUN mv safe_vault-v0.8.0-linux-x64/safe_vault .
 
 RUN apt-get clean
 
