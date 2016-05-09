@@ -18,5 +18,6 @@ RUN apt-get clean
 
 COPY run.sh /app
 
-EXPOSE 5483 8080
+EXPOSE 8080
+EXPOSE 5483
 CMD ./run.sh
